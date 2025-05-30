@@ -6,15 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
     menuTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             // Remove active class from all tabs
-            menuTabs.forEach(t => t.classList.remove('active'));
-            // Add active class to clicked tab
-            tab.classList.add('active');
+            menuTabs.forEach(t => t.classList.remove('active', 'bg-[#1A1A1A]', 'text-white'));
+            menuTabs.forEach(t => t.classList.add('bg-white/50', 'text-[#1A1A1A]'));
 
-            // Hide all categories
-            menuCategories.forEach(category => category.classList.add('hidden'));
+            // Add active class to clicked tab
+            tab.classList.add('active', 'bg-[#1A1A1A]', 'text-white');
+            tab.classList.remove('bg-white/50', 'text-[#1A1A1A]');
+
             // Show selected category
-            const categoryId = tab.getAttribute('data-category');
-            document.getElementById(categoryId).classList.remove('hidden');
+            const category = tab.getAttribute('data-category');
+            menuCategories.forEach(cat => {
+                cat.classList.add('hidden');
+                if (cat.id === category) {
+                    cat.classList.remove('hidden');
+                }
+            });
         });
     });
 
@@ -28,14 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
         lightboxImg.alt = img.alt;
         lightbox.classList.remove('hidden');
         lightbox.classList.add('flex');
-        document.body.style.overflow = 'hidden';
     };
 
     window.closeLightbox = function() {
         const lightbox = document.getElementById('lightbox');
         lightbox.classList.add('hidden');
         lightbox.classList.remove('flex');
-        document.body.style.overflow = '';
     };
 
     // Close lightbox when clicking outside the image
@@ -52,27 +56,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Testimonials Carousel Functionality
-    function scrollTestimonials(direction) {
-        const carousel = document.getElementById('testimonials-carousel');
-        const scrollAmount = 350 + 32; // card width + gap
-        
+    // Testimonials Carousel
+    const carouselTrack = document.querySelector('.carousel-track');
+    const scrollAmount = 358; // card width + gap
+
+    window.scrollCarousel = function(direction) {
         if (direction === 'left') {
-            carousel.scrollBy({
+            carouselTrack.scrollBy({
                 left: -scrollAmount,
                 behavior: 'smooth'
             });
         } else {
-            carousel.scrollBy({
+            carouselTrack.scrollBy({
                 left: scrollAmount,
                 behavior: 'smooth'
             });
         }
     }
 
-    // Hide scrollbar for testimonials carousel
-    const carousel = document.getElementById('testimonials-carousel');
-    carousel.style.scrollbarWidth = 'none';
-    carousel.style.msOverflowStyle = 'none';
-    carousel.style.webkitOverflowScrolling = 'touch';
+    // Hide scrollbar but keep functionality
+    const style = document.createElement('style');
+    style.textContent = `
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    `;
+    document.head.appendChild(style);
 });
