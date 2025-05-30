@@ -145,5 +145,189 @@
             </div>
         </div>
     </section>
+
+    <!-- Menu Section -->
+    <section class="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-b from-[#FDF6E9] to-[#F5E6D3]">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-[#1A1A1A]">Our Menu</h2>
+                <p class="font-poppins text-lg text-[#4A4A4A] max-w-2xl mx-auto">
+                    Discover our carefully curated selection of dishes, crafted with passion and the finest ingredients
+                </p>
+            </div>
+
+            <!-- Menu Container -->
+            <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12">
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button class="menu-tab active px-6 py-3 rounded-full bg-[#1A1A1A] text-white font-medium transition-colors" data-category="starters">
+                        Starters
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full bg-white/50 text-[#1A1A1A] font-medium hover:bg-[#1A1A1A] hover:text-white transition-colors" data-category="main">
+                        Main Course
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full bg-white/50 text-[#1A1A1A] font-medium hover:bg-[#1A1A1A] hover:text-white transition-colors" data-category="desserts">
+                        Desserts
+                    </button>
+                    <button class="menu-tab px-6 py-3 rounded-full bg-white/50 text-[#1A1A1A] font-medium hover:bg-[#1A1A1A] hover:text-white transition-colors" data-category="beverages">
+                        Beverages
+                    </button>
+                </div>
+
+                <!-- Menu Items Container -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Starters -->
+                    <div class="menu-category" id="starters">
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="Truffle Arancini" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Truffle Arancini</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$16</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Crispy risotto balls filled with mozzarella and black truffle, served with aioli</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="Seared Scallops" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Seared Scallops</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$24</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Fresh sea scallops with cauliflower puree and brown butter sauce</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Course -->
+                    <div class="menu-category hidden" id="main">
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                         alt="Wagyu Ribeye" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Wagyu Ribeye</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$68</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">A5 Japanese Wagyu with truffle mashed potatoes and seasonal vegetables</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="Lobster Linguine" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Lobster Linguine</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$42</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Fresh Maine lobster with house-made linguine in a white wine sauce</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desserts -->
+                    <div class="menu-category hidden" id="desserts">
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                                         alt="Chocolate Soufflé" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Chocolate Soufflé</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$14</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Warm chocolate soufflé with vanilla bean ice cream</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="Crème Brûlée" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Crème Brûlée</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$12</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Classic vanilla bean crème brûlée with fresh berries</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Beverages -->
+                    <div class="menu-category hidden" id="beverages">
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                                         alt="Signature Cocktail" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Éclat Spritz</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$16</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Our signature cocktail with prosecco, elderflower, and fresh berries</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-item group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                            <div class="flex items-start gap-6">
+                                <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                                         alt="Wine Selection" 
+                                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-playfair text-xl font-bold text-[#1A1A1A]">Sommelier's Choice</h3>
+                                        <span class="font-medium text-[#1A1A1A]">$18</span>
+                                    </div>
+                                    <p class="text-[#4A4A4A] text-sm">Curated wine selection by our expert sommelier</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html> 
