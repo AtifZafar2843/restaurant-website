@@ -328,6 +328,90 @@
             </div>
         </div>
     </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 px-8 md:px-16 lg:px-24 bg-[#FDF6E9]">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-[#1A1A1A]">Moments from Our Kitchen</h2>
+                <p class="font-poppins text-lg text-[#4A4A4A] max-w-2xl mx-auto">
+                    A glimpse into the magic behind the flavors
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item mb-8 break-inside-avoid">
+                    <div class="group relative overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Restaurant Interior" 
+                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item mb-8 break-inside-avoid">
+                    <div class="group relative overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" 
+                             alt="Chef at Work" 
+                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item mb-8 break-inside-avoid">
+                    <div class="group relative overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Signature Dish" 
+                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item mb-8 break-inside-avoid">
+                    <div class="group relative overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Dining Experience" 
+                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item mb-8 break-inside-avoid">
+                    <div class="group relative overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Wine Selection" 
+                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item mb-8 break-inside-avoid">
+                    <div class="group relative overflow-hidden rounded-2xl cursor-pointer" onclick="openLightbox(this)">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Culinary Art" 
+                             class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300">
+                ×
+            </button>
+            <img id="lightbox-img" src="" alt="" class="max-w-[90%] max-h-[90vh] object-contain">
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 </html> 
