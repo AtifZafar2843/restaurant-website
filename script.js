@@ -6,16 +6,12 @@ document.addEventListener('DOMContentLoaded', function() {
     menuTabs.forEach(tab => {
         tab.addEventListener('click', () => {
             // Remove active class from all tabs
-            menuTabs.forEach(t => t.classList.remove('active', 'bg-[#1A1A1A]', 'text-white'));
-            menuTabs.forEach(t => t.classList.add('bg-white/50', 'text-[#1A1A1A]'));
-
+            menuTabs.forEach(t => t.classList.remove('active'));
             // Add active class to clicked tab
-            tab.classList.add('active', 'bg-[#1A1A1A]', 'text-white');
-            tab.classList.remove('bg-white/50', 'text-[#1A1A1A]');
+            tab.classList.add('active');
 
             // Hide all categories
             menuCategories.forEach(category => category.classList.add('hidden'));
-
             // Show selected category
             const categoryId = tab.getAttribute('data-category');
             document.getElementById(categoryId).classList.remove('hidden');
@@ -55,4 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
             closeLightbox();
         }
     });
+
+    // Testimonials Carousel Functionality
+    function scrollTestimonials(direction) {
+        const carousel = document.getElementById('testimonials-carousel');
+        const scrollAmount = 350 + 32; // card width + gap
+        
+        if (direction === 'left') {
+            carousel.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        } else {
+            carousel.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    // Hide scrollbar for testimonials carousel
+    const carousel = document.getElementById('testimonials-carousel');
+    carousel.style.scrollbarWidth = 'none';
+    carousel.style.msOverflowStyle = 'none';
+    carousel.style.webkitOverflowScrolling = 'touch';
 });
