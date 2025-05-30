@@ -40,4 +40,240 @@
         flex-wrap: wrap;
         gap: 1rem;
     }
+}
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-fade-up-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+}
+
+.animate-fade-up-delay-2 {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease-out 0.4s forwards;
+}
+
+.animate-zoom-in {
+    opacity: 0;
+    transform: scale(0.95);
+    animation: zoomIn 1s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-bounce-slow {
+    animation: bounce 2s infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse 2s infinite;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+}
+
+/* Hover Animations */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-zoom {
+    transition: transform 0.3s ease;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.05);
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scroll Trigger Animations */
+.scroll-trigger {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-trigger.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Menu Item Hover Effects */
+.menu-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Gallery Image Hover Effects */
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Lightbox Animation */
+#lightbox {
+    transition: opacity 0.3s ease;
+}
+
+#lightbox img {
+    transition: transform 0.3s ease;
+}
+
+/* Form Field Focus Effects */
+input:focus, textarea:focus, select:focus {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+}
+
+/* Button Hover Effects */
+button {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .animate-slide-in-left,
+    .animate-slide-in-right {
+        animation: fadeUp 0.8s ease-out forwards;
+    }
 } 

@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luxury Restaurant</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-[#0A0A0A] text-white overflow-x-hidden">
     <!-- Floating Navbar -->
-    <nav class="fixed top-8 right-8 z-50 bg-black/20 backdrop-blur-md rounded-full px-6 py-3">
+    <nav class="fixed top-8 right-8 z-50 bg-black/20 backdrop-blur-md rounded-full px-6 py-3 animate-fade-in">
         <ul class="flex space-x-8">
             <li><a href="#" class="text-white/80 hover:text-white transition-colors">Home</a></li>
             <li><a href="#" class="text-white/80 hover:text-white transition-colors">Menu</a></li>
@@ -25,13 +27,13 @@
         <!-- Left Content -->
         <div class="w-full lg:w-1/2 relative z-10">
             <div class="max-w-xl">
-                <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
+                <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 animate-fade-up">
                     Éclat
                 </h1>
-                <p class="font-poppins text-xl md:text-2xl text-white/80 mb-12">
+                <p class="font-poppins text-xl md:text-2xl text-white/80 mb-12 animate-fade-up-delay">
                     Taste Beyond Imagination
                 </p>
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-wrap gap-4 animate-fade-up-delay-2">
                     <button class="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors">
                         View Menu
                     </button>
@@ -43,7 +45,7 @@
         </div>
 
         <!-- Right Content - Image Container -->
-        <div class="hidden lg:block w-1/2 relative">
+        <div class="hidden lg:block w-1/2 relative animate-zoom-in">
             <div class="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px]">
                 <div class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl"></div>
                 <div class="absolute inset-0 rounded-full overflow-hidden">
@@ -55,7 +57,7 @@
         </div>
 
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
             <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
                 <div class="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
             </div>
@@ -65,7 +67,7 @@
     <!-- About Us Section -->
     <section class="py-24 px-8 md:px-16 lg:px-24 bg-[#FDF6E9] text-[#1A1A1A]">
         <!-- Section Header -->
-        <div class="max-w-3xl mx-auto text-center mb-20">
+        <div class="max-w-3xl mx-auto text-center mb-20 animate-fade-up">
             <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">Our Journey to Flavor</h2>
             <p class="font-poppins text-lg text-[#4A4A4A] leading-relaxed">
                 From humble beginnings to culinary excellence, our story is woven with passion, tradition, and innovation. 
@@ -76,7 +78,7 @@
         <!-- Story Blocks -->
         <div class="max-w-7xl mx-auto space-y-32">
             <!-- Our Roots -->
-            <div class="relative">
+            <div class="relative animate-slide-in-left">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                     <div class="w-full lg:w-1/2 lg:ml-8">
                         <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -99,7 +101,7 @@
             </div>
 
             <!-- Crafting Cuisine -->
-            <div class="relative">
+            <div class="relative animate-slide-in-right">
                 <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16">
                     <div class="w-full lg:w-1/2 lg:mr-8">
                         <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -122,7 +124,7 @@
             </div>
 
             <!-- Serving Love -->
-            <div class="relative">
+            <div class="relative animate-slide-in-left">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
                     <div class="w-full lg:w-1/2 lg:ml-8">
                         <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -150,7 +152,7 @@
     <section class="py-24 px-8 md:px-16 lg:px-24 bg-gradient-to-b from-[#FDF6E9] to-[#F5E6D3]">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 animate-fade-up">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-[#1A1A1A]">Our Menu</h2>
                 <p class="font-poppins text-lg text-[#4A4A4A] max-w-2xl mx-auto">
                     Discover our carefully curated selection of dishes, crafted with passion and the finest ingredients
@@ -160,7 +162,7 @@
             <!-- Menu Container -->
             <div class="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl p-8 md:p-12">
                 <!-- Category Tabs -->
-                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <div class="flex flex-wrap justify-center gap-4 mb-12 animate-fade-up-delay">
                     <button class="menu-tab active px-6 py-3 rounded-full bg-[#1A1A1A] text-white font-medium transition-colors" data-category="starters">
                         Starters
                     </button>
@@ -333,7 +335,7 @@
     <section class="py-24 px-8 md:px-16 lg:px-24 bg-[#FDF6E9]">
         <div class="max-w-7xl mx-auto">
             <!-- Section Header -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 animate-fade-up">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-[#1A1A1A]">Moments from Our Kitchen</h2>
                 <p class="font-poppins text-lg text-[#4A4A4A] max-w-2xl mx-auto">
                     A glimpse into the magic behind the flavors
@@ -405,7 +407,7 @@
         </div>
 
         <!-- Lightbox Modal -->
-        <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center">
+        <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center animate-scale-in">
             <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300">
                 ×
             </button>
@@ -429,7 +431,7 @@
 
         <div class="max-w-7xl mx-auto relative">
             <!-- Section Header -->
-            <div class="text-center mb-20">
+            <div class="text-center mb-20 animate-fade-up">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-[#1A1A1A]">Why Choose Us?</h2>
                 <p class="font-poppins text-lg text-[#4A4A4A] max-w-2xl mx-auto">
                     What makes dining with us unforgettable
@@ -509,7 +511,7 @@
         <div class="max-w-7xl mx-auto relative">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
                 <!-- Left Content -->
-                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <div class="w-full lg:w-1/2 text-center lg:text-left animate-slide-in-left">
                     <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-white">
                         Craving Our Food?
                     </h2>
@@ -542,7 +544,7 @@
                 </div>
 
                 <!-- Right Content - Image Container -->
-                <div class="w-full lg:w-1/2 relative">
+                <div class="w-full lg:w-1/2 relative animate-slide-in-right">
                     <div class="relative w-[400px] h-[400px] mx-auto">
                         <!-- Decorative Elements -->
                         <div class="absolute inset-0 bg-gradient-to-br from-[#FC8019]/20 to-[#E23744]/20 rounded-full blur-3xl"></div>
@@ -573,7 +575,7 @@
 
         <div class="max-w-7xl mx-auto relative">
             <!-- Section Header -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 animate-fade-up">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-white">What Our Guests Say</h2>
                 <p class="font-poppins text-lg text-white/80 max-w-2xl mx-auto">
                     Real stories from happy diners
@@ -681,12 +683,12 @@
                 </div>
 
                 <!-- Navigation Buttons -->
-                <button onclick="scrollCarousel('left')" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                <button onclick="scrollCarousel('left')" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors animate-pulse-slow">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                     </svg>
                 </button>
-                <button onclick="scrollCarousel('right')" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                <button onclick="scrollCarousel('right')" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors animate-pulse-slow">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
@@ -704,7 +706,7 @@
 
         <div class="max-w-7xl mx-auto relative">
             <!-- Section Header -->
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 animate-fade-up">
                 <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-[#1A1A1A]">Visit Us or Reserve a Table</h2>
                 <p class="font-poppins text-lg text-[#4A4A4A] max-w-2xl mx-auto">
                     We're always ready to welcome you!
@@ -714,7 +716,7 @@
             <!-- Content Container -->
             <div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
                 <!-- Left Side - Reservation Form -->
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-1/2 animate-slide-in-left">
                     <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
                         <form class="space-y-6">
                             <!-- Name Field -->
@@ -785,7 +787,7 @@
                 </div>
 
                 <!-- Right Side - Location Info -->
-                <div class="w-full lg:w-1/2">
+                <div class="w-full lg:w-1/2 animate-slide-in-right">
                     <!-- Map Container -->
                     <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl mb-8">
                         <div class="aspect-[4/3] rounded-2xl overflow-hidden">
@@ -847,6 +849,105 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-[#0A0A0A] text-white/80 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')] bg-cover bg-center blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative pt-16 pb-16 px-8 md:px-16 lg:px-24">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand & About -->
+                <div class="space-y-6">
+                    <h3 class="font-playfair text-3xl font-bold text-white">Éclat</h3>
+                    <p class="text-white/60 leading-relaxed">
+                        A culinary journey where tradition meets innovation. Experience the art of fine dining in an atmosphere of elegance and warmth.
+                    </p>
+                    <!-- Social Media Icons -->
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6">Quick Links</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-white/60 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-white transition-colors">Our Menu</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#" class="text-white/60 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Opening Hours -->
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6">Opening Hours</h4>
+                    <ul class="space-y-4">
+                        <li class="flex justify-between">
+                            <span class="text-white/60">Monday - Friday</span>
+                            <span class="text-white">11:00 - 23:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-white/60">Saturday</span>
+                            <span class="text-white">10:00 - 00:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span class="text-white/60">Sunday</span>
+                            <span class="text-white">10:00 - 22:00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="font-playfair text-xl font-bold text-white mb-6">Stay Updated</h4>
+                    <p class="text-white/60 mb-6">Subscribe to our newsletter for exclusive offers and updates.</p>
+                    <form class="space-y-4">
+                        <div class="relative">
+                            <input type="email" 
+                                   placeholder="Enter your email" 
+                                   class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 focus:border-white/40 focus:ring-2 focus:ring-white/20 transition-colors text-white placeholder-white/40">
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-white text-[#0A0A0A] px-6 py-3 rounded-xl font-medium hover:bg-white/90 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright Bar -->
+            <div class="pt-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-white/60 text-sm">
+                        © 2024 Éclat. All rights reserved.
+                    </p>
+                    <p class="text-white/60 text-sm">
+                        Designed by <a href="#" class="text-white hover:text-white/80 transition-colors">Atif</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html> 

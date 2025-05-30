@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
     // Menu Tab Functionality
     const menuTabs = document.querySelectorAll('.menu-tab');
     const menuCategories = document.querySelectorAll('.menu-category');
@@ -86,4 +89,127 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
+
+    // Scroll-Triggered Animations
+    // About Section Story Blocks
+    gsap.utils.toArray('.animate-slide-in-left, .animate-slide-in-right').forEach((element, i) => {
+        gsap.from(element, {
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            },
+            x: element.classList.contains('animate-slide-in-left') ? -50 : 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+    });
+
+    // Menu Items
+    gsap.utils.toArray('.menu-item').forEach((item, i) => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    // Gallery Items
+    gsap.utils.toArray('.gallery-item').forEach((item, i) => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    // Feature Cards
+    gsap.utils.toArray('.feature-card').forEach((card, i) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    // Testimonial Cards
+    gsap.utils.toArray('.carousel-item').forEach((item, i) => {
+        gsap.from(item, {
+            scrollTrigger: {
+                trigger: item,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            x: i % 2 === 0 ? -30 : 30,
+            opacity: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    // Form Fields
+    gsap.utils.toArray('input, textarea, select').forEach((field, i) => {
+        gsap.from(field, {
+            scrollTrigger: {
+                trigger: field,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            y: 20,
+            opacity: 0,
+            duration: 0.5,
+            delay: i * 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    // Contact Info Cards
+    gsap.utils.toArray('.contact-info-card').forEach((card, i) => {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: "top 85%",
+                toggleActions: "play none none reverse"
+            },
+            y: 30,
+            opacity: 0,
+            duration: 0.8,
+            delay: i * 0.1,
+            ease: "power2.out"
+        });
+    });
+
+    // Continuous Floating Animation for Feature Cards
+    gsap.utils.toArray('.float-animation').forEach(card => {
+        gsap.to(card, {
+            y: -10,
+            duration: 2,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut"
+        });
+    });
 });
