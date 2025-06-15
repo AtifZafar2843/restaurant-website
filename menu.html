@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Delicious Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Delicious</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">Delicious</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Header -->
+    <section class="menu-header">
+        <div class="container">
+            <h1>Our Menu</h1>
+            <p>Discover our delicious dishes</p>
+        </div>
+    </section>
+
+    <!-- Menu Categories -->
+    <section class="menu-categories">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="starters">Starters</button>
+                <button class="tab-btn" data-category="main-course">Main Course</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+                <button class="tab-btn" data-category="beverages">Beverages</button>
+            </div>
+
+            <!-- Starters -->
+            <div class="menu-section active" id="starters">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=80" alt="Bruschetta">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Classic Bruschetta</h3>
+                            <p>Toasted bread topped with fresh tomatoes, basil, and garlic</p>
+                            <span class="price">₹250</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=800&q=80" alt="Spring Rolls">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Crispy Spring Rolls</h3>
+                            <p>Vegetable spring rolls with sweet chili sauce</p>
+                            <span class="price">₹280</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=800&q=80" alt="Garlic Bread">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Garlic Bread</h3>
+                            <p>Toasted bread with garlic butter and herbs</p>
+                            <span class="price">₹180</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=800&q=80" alt="Caesar Salad">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Caesar Salad</h3>
+                            <p>Fresh romaine lettuce with Caesar dressing and croutons</p>
+                            <span class="price">₹320</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Course -->
+            <div class="menu-section" id="main-course">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" alt="Grilled Salmon">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Grilled Salmon</h3>
+                            <p>Fresh salmon with lemon butter sauce and seasonal vegetables</p>
+                            <span class="price">₹850</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?auto=format&fit=crop&w=800&q=80" alt="Beef Steak">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Classic Beef Steak</h3>
+                            <p>Premium beef steak with mushroom sauce and mashed potatoes</p>
+                            <span class="price">₹1200</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=800&q=80" alt="Pasta Carbonara">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Pasta Carbonara</h3>
+                            <p>Creamy pasta with bacon, egg, and parmesan cheese</p>
+                            <span class="price">₹450</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=80" alt="Chicken Tikka">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Chicken Tikka</h3>
+                            <p>Tender chicken pieces marinated in spices and grilled</p>
+                            <span class="price">₹550</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts -->
+            <div class="menu-section" id="desserts">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?auto=format&fit=crop&w=800&q=80" alt="Chocolate Cake">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Chocolate Lava Cake</h3>
+                            <p>Warm chocolate cake with vanilla ice cream</p>
+                            <span class="price">₹350</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80" alt="Cheesecake">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>New York Cheesecake</h3>
+                            <p>Classic cheesecake with berry compote</p>
+                            <span class="price">₹320</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Tiramisu">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Tiramisu</h3>
+                            <p>Classic Italian dessert with coffee-soaked ladyfingers</p>
+                            <span class="price">₹280</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Ice Cream">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Ice Cream Selection</h3>
+                            <p>Three scoops of premium ice cream with toppings</p>
+                            <span class="price">₹250</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages -->
+            <div class="menu-section" id="beverages">
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=800&q=80" alt="Fresh Juice">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Fresh Fruit Juice</h3>
+                            <p>Seasonal fruit juice of your choice</p>
+                            <span class="price">₹180</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Special Coffee">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Special Coffee</h3>
+                            <p>House special coffee with caramel and cream</p>
+                            <span class="price">₹220</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Smoothie">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Berry Smoothie</h3>
+                            <p>Mixed berry smoothie with yogurt and honey</p>
+                            <span class="price">₹250</span>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=800&q=80" alt="Mocktail">
+                        </div>
+                        <div class="menu-item-content">
+                            <h3>Tropical Mocktail</h3>
+                            <p>Refreshing tropical fruit mocktail with mint</p>
+                            <span class="price">₹280</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delicious</h3>
+                    <p>Experience the finest dining in town</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>123 Restaurant Street</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: info@delicious.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+                    <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/loader.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html> 

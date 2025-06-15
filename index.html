@@ -3,228 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gourmet Haven | Fine Dining Experience</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Delicious Restaurant</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Delicious</div>
+            <div class="loader-progress"></div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="main-nav">
         <div class="nav-container">
-            <div class="nav-brand">
-                <h1>Gourmet Haven</h1>
-            </div>
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-menu">
+            <div class="logo">Delicious</div>
+            <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="reservation.html" class="reserve-btn">Reserve Table</a></li>
             </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
+    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;">
         <div class="hero-content">
-            <h1 class="hero-title">Experience<br>Culinary Excellence</h1>
-            <p class="hero-subtitle">Where every dish tells a story</p>
+            <h1>Welcome to Delicious</h1>
+            <p>Experience the finest dining in town</p>
             <div class="hero-buttons">
-                <a href="reservation.html" class="cta-button primary">Book a Table</a>
-                <a href="menu.html" class="cta-button secondary">View Menu</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <span>Scroll to explore</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <div class="welcome-container">
-            <div class="welcome-content">
-                <h2 class="section-title">Welcome to Gourmet Haven</h2>
-                <p class="section-subtitle">A culinary journey through exquisite flavors</p>
-                <p class="welcome-text">Nestled in the heart of the city, Gourmet Haven offers an unparalleled dining experience where traditional flavors meet contemporary culinary artistry. Our master chefs craft each dish with passion and precision, using only the finest ingredients sourced from local producers.</p>
-                <a href="about.html" class="learn-more">Learn More About Us <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="welcome-images">
-                <div class="image-stack">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Restaurant Interior" class="stack-image main">
-                    <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" alt="Chef Cooking" class="stack-image overlay">
-                </div>
+                <a href="menu.html" class="cta-button">View Menu</a>
+                <a href="contact.html" class="cta-button secondary">Book a Table</a>
             </div>
         </div>
     </section>
 
-    <!-- Featured Dishes -->
-    <section class="featured-dishes">
-        <div class="section-header">
-            <h2 class="section-title">Signature Dishes</h2>
-            <p class="section-subtitle">Our chef's special creations</p>
-        </div>
-        <div class="dishes-grid">
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Signature Pasta">
-                    <div class="dish-overlay">
-                        <span class="price">$32</span>
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <h2>Our Special Dishes</h2>
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Grilled Salmon">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Grilled Salmon</h3>
+                        <p>Fresh salmon with lemon butter sauce</p>
+                        <a href="menu.html" class="featured-link">View Details</a>
                     </div>
                 </div>
-                <div class="dish-content">
-                    <h3>Truffle Infused Pasta</h3>
-                    <p>Handmade pasta with black truffle, aged parmesan, and wild mushrooms</p>
-                </div>
-            </div>
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Wagyu Steak">
-                    <div class="dish-overlay">
-                        <span class="price">$65</span>
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Beef Steak">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Beef Steak</h3>
+                        <p>Premium beef with mushroom sauce</p>
+                        <a href="menu.html" class="featured-link">View Details</a>
                     </div>
                 </div>
-                <div class="dish-content">
-                    <h3>A5 Wagyu Ribeye</h3>
-                    <p>Premium Japanese wagyu with truffle butter and seasonal vegetables</p>
-                </div>
-            </div>
-            <div class="dish-card">
-                <div class="dish-image">
-                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Seafood Platter">
-                    <div class="dish-overlay">
-                        <span class="price">$45</span>
+                <div class="featured-item">
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1612874742237-6526221588e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Pasta Carbonara">
+                    </div>
+                    <div class="featured-content">
+                        <h3>Pasta Carbonara</h3>
+                        <p>Classic Italian pasta dish</p>
+                        <a href="menu.html" class="featured-link">View Details</a>
                     </div>
                 </div>
-                <div class="dish-content">
-                    <h3>Ocean's Bounty</h3>
-                    <p>Fresh seafood selection with citrus beurre blanc sauce</p>
-                </div>
-            </div>
-        </div>
-        <div class="view-menu">
-            <a href="menu.html" class="menu-button">View Full Menu <i class="fas fa-arrow-right"></i></a>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="experience">
-        <div class="experience-container">
-            <div class="experience-content">
-                <h2 class="section-title">The Gourmet Experience</h2>
-                <div class="experience-features">
-                    <div class="feature">
-                        <i class="fas fa-wine-glass-alt"></i>
-                        <h3>Fine Wines</h3>
-                        <p>Curated selection of premium wines from around the world</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Expert Chefs</h3>
-                        <p>Our culinary team brings years of international experience</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-star"></i>
-                        <h3>5-Star Service</h3>
-                        <p>Impeccable attention to detail and personalized service</p>
-                    </div>
-                </div>
-            </div>
-            <div class="experience-image">
-                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fine Dining Experience">
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
+    <!-- About Preview Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Welcome to Delicious, where passion meets flavor. Our journey began with a simple dream: to create memorable dining experiences through exceptional food and service.</p>
+                    <p>Every dish we serve is crafted with love and the finest ingredients, bringing you the authentic taste of culinary excellence.</p>
+                    <a href="about.html" class="cta-button">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Our Restaurant">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
     <section class="testimonials">
-        <div class="testimonials-container">
-            <h2 class="section-title">Guest Experiences</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>"An extraordinary dining experience that exceeded all expectations. The attention to detail and the passion for culinary excellence is evident in every dish."</p>
+                        <p>"The best dining experience I've had in years. The food was exceptional and the service was impeccable."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Sarah Johnson">
-                            <div class="author-info">
-                                <h4>Sarah Johnson</h4>
-                                <span>Food Critic</span>
-                            </div>
+                            <h4>John Doe</h4>
+                            <p>Regular Customer</p>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial">
+                <div class="testimonial-item">
                     <div class="testimonial-content">
                         <i class="fas fa-quote-left"></i>
-                        <p>"The perfect blend of innovative cuisine and classic elegance. Every visit feels like a special occasion."</p>
+                        <p>"Amazing atmosphere and delicious food. The staff made us feel like family. Will definitely come back!"</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Michael Chen">
-                            <div class="author-info">
-                                <h4>Michael Chen</h4>
-                                <span>Regular Guest</span>
-                            </div>
+                            <h4>Jane Smith</h4>
+                            <p>Food Blogger</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Reservation CTA -->
-    <section class="reservation-cta">
-        <div class="cta-container">
-            <h2>Ready for an Unforgettable Experience?</h2>
-            <p>Book your table now and indulge in culinary excellence</p>
-            <a href="reservation.html" class="cta-button primary">Make a Reservation</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
+    <footer class="footer">
+        <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Gourmet Haven</h3>
-                    <p>123 Culinary Street<br>Foodville, FL 12345</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Hours</h3>
-                    <p>Monday - Thursday<br>11:00 AM - 10:00 PM</p>
-                    <p>Friday - Sunday<br>11:00 AM - 11:00 PM</p>
+                    <h3>Delicious</h3>
+                    <p>Experience the finest dining in town</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p>Phone: (555) 123-4567<br>
-                    Email: info@gourmethaven.com</p>
+                    <p>123 Restaurant Street</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: info@delicious.com</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Newsletter</h3>
-                    <p>Subscribe for special offers and updates</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Enter your email">
-                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
-                    </form>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 11:00 AM - 10:00 PM</p>
+                    <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Gourmet Haven. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/main.js"></script>
 </body>
-</html>
+</html> 
